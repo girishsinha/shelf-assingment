@@ -1,0 +1,26 @@
+[
+  {
+    "id": "u1",
+    "name": "Ravi Kumar",
+    "mobile": "9876543210",
+    "email": "ravi@example.com",
+    "password": "123456",
+    "role": "owner"
+  },
+  {
+    "id": "u2",
+    "name": "Aditi Sharma",
+    "mobile": "9876501234",
+    "email": "aditi@example.com",
+    "password": "pass123",
+    "role": "seeker"
+  },
+  {
+    "id": "1744538630257",
+    "email": "girish@gmail.com",
+    "password": "1234",
+    "name": "girish ",
+    "mobile": "6267768654",
+    "role": "owner"
+  }
+]

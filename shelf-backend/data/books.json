@@ -1,0 +1,74 @@
+[
+  {
+    "id": "b1",
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "genre": "Fiction",
+    "location": "Delhi",
+    "contact": "ravi@example.com",
+    "ownerId": "u1",
+    "status": "available"
+  },
+  {
+    "id": "1712908902734",
+    "status": "available",
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "genre": "Programming",
+    "location": "Bhilai",
+    "contact": "9876543210",
+    "ownerId": "u1"
+  },
+  {
+    "id": "1744494686129",
+    "status": "Rented",
+    "title": "abcd",
+    "author": "girish",
+    "genre": "comedy",
+    "location": "anda",
+    "contact": "girisi@gmail.com",
+    "ownerId": "u1"
+  },
+  {
+    "id": "1744521362249",
+    "status": "available",
+    "title": "gitishs ",
+    "author": "ahljhife",
+    "genre": "hhh",
+    "location": "anda",
+    "contact": "girishs@gmail.com",
+    "ownerId": "u1"
+  },
+  {
+    "id": "1744521434495",
+    "status": "available",
+    "title": "the book",
+    "author": "me",
+    "genre": "ni",
+    "location": "anda",
+    "contact": "ajsjfoasf@gmail.com",
+    "ownerId": "u1"
+  },
+  {
+    "id": "1744531701442",
+    "status": "available",
+    "title": "testing file",
+    "author": "mee",
+    "genre": "research",
+    "location": "anda",
+    "contact": "girishsi@gmail.com",
+    "ownerId": "u1",
+    "imageUrl": "/uploads/akash kumar verma.png"
+  },
+  {
+    "id": "1744533724052",
+    "status": "available",
+    "title": "giriss test",
+    "author": "meee",
+    "genre": "vom",
+    "location": "anda",
+    "contact": "6267768654",
+    "ownerId": "u1",
+    "imageUrl": "/uploads/ChatGPT Image Apr 1, 2025, 11_39_49 AM.png"
+  }
+]
