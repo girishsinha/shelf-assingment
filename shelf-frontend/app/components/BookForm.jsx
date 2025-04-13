@@ -60,7 +60,9 @@ export default function BookForm({ onAdd, setOpenForm }) {
   return (
     <div className="fixed w-full h-full flex items-center bg-gray-900 justify-center z-50">
       <form onSubmit={handleSubmit} className="sm:w-xl w-full p-4 mx-auto">
-        <h2 className="">Add a Book</h2>
+        <h2 className="mb-6 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">
+          Add a Book
+        </h2>
         <div className="flex flex-col gap-5">
           <label
             htmlFor="file"

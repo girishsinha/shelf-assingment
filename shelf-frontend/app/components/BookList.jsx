@@ -279,7 +279,7 @@ export default function BookList({ books, user, onUpdate }) {
                   {book.imageUrl && (
                     <img
                       className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
-                      src={`http://localhost:3000${book.imageUrl}`}
+                      src={`${process.env.NEXT_PUBLIC_serverURL}${book.imageUrl}`}
                       alt="img"
                     />
                   )}
