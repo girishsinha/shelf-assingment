@@ -1,13 +1,16 @@
 "use client";
 import { useState } from "react";
 import { redirect } from "next/navigation";
+import Loading from "../components/Loading";
 
 export default function Login() {
   //   const router = useRouter();
   const [form, setForm] = useState({ email: "", password: "" });
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     const res = await fetch(`${process.env.NEXT_PUBLIC_serverURL}/auth/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -20,8 +23,12 @@ export default function Login() {
     } else {
       alert("Invalid credentials");
     }
+    setLoading(false);
   };
-
+  if (loading) {
+    console.log(loading);
+    return <Loading />;
+  }
   return (
     <div className="flex flex-col items-center justify-center h-screen ">
       <form onSubmit={handleSubmit} className="sm:w-lg w-full p-4 mx-auto">

@@ -1,129 +1,4 @@
-// "use client";
-// import { useState } from "react";
-
-// export default function BookList({ books, user, onUpdate }) {
-//   const [editingId, setEditingId] = useState(null);
-//   const [editForm, setEditForm] = useState({});
-
-//   const handleDelete = async (id) => {
-//     await fetch(`http://localhost:3000/books/${id}/delete`, {
-//       method: "DELETE",
-//     });
-//     onUpdate();
-//   };
-
-//   const handleEdit = (book) => {
-//     setEditingId(book.id);
-//     setEditForm(book);
-//   };
-
-//   const handleSave = async () => {
-//     await fetch(`http://localhost:3000/books/${editForm.id}/edit`, {
-//       method: "PUT",
-//       headers: { "Content-Type": "application/json" },
-//       body: JSON.stringify(editForm),
-//     });
-//     setEditingId(null);
-//     onUpdate();
-//   };
-
-//   return (
-//     <div className="grid gap-4">
-//       {books.map((book) => {
-//         const isOwner = user?.id === book.ownerId;
-
-//         return (
-//           <div key={book.id} className="bg-white p-4 rounded shadow-md">
-//             {editingId === book.id ? (
-//               <>
-//                 <input
-//                   className="border p-2 mb-2 w-full"
-//                   value={editForm.title}
-//                   onChange={(e) =>
-//                     setEditForm({ ...editForm, title: e.target.value })
-//                   }
-//                 />
-//                 <input
-//                   className="border p-2 mb-2 w-full"
-//                   value={editForm.author}
-//                   onChange={(e) =>
-//                     setEditForm({ ...editForm, author: e.target.value })
-//                   }
-//                 />
-//                 <input
-//                   className="border p-2 mb-2 w-full"
-//                   value={editForm.genre}
-//                   onChange={(e) =>
-//                     setEditForm({ ...editForm, genre: e.target.value })
-//                   }
-//                 />
-//                 <input
-//                   className="border p-2 mb-2 w-full"
-//                   value={editForm.location}
-//                   onChange={(e) =>
-//                     setEditForm({ ...editForm, location: e.target.value })
-//                   }
-//                 />
-//                 <input
-//                   className="border p-2 mb-2 w-full"
-//                   value={editForm.contact}
-//                   onChange={(e) =>
-//                     setEditForm({ ...editForm, contact: e.target.value })
-//                   }
-//                 />
-//                 <button
-//                   className="bg-green-600 text-white px-4 py-1 rounded mr-2"
-//                   onClick={handleSave}
-//                 >
-//                   Save
-//                 </button>
-//                 <button
-//                   className="bg-gray-500 text-white px-4 py-1 rounded"
-//                   onClick={() => setEditingId(null)}
-//                 >
-//                   Cancel
-//                 </button>
-//               </>
-//             ) : (
-//               <>
-//                 <h3 className="text-lg font-bold">{book.title}</h3>
-//                 <p>
-//                   <strong>Author:</strong> {book.author}
-//                 </p>
-//                 <p>
-//                   <strong>Genre:</strong> {book.genre || "N/A"}
-//                 </p>
-//                 <p>
-//                   <strong>Location:</strong> {book.location}
-//                 </p>
-//                 <p>
-//                   <strong>Contact:</strong> {book.contact}
-//                 </p>
-//                 <p className="italic text-sm mt-1">Status: {book.status}</p>
-//                 {isOwner && (
-//                   <div className="mt-2">
-//                     <button
-//                       className="bg-yellow-500 text-white px-3 py-1 rounded mr-2"
-//                       onClick={() => handleEdit(book)}
-//                     >
-//                       Edit
-//                     </button>
-//                     <button
-//                       className="bg-red-600 text-white px-3 py-1 rounded"
-//                       onClick={() => handleDelete(book.id)}
-//                     >
-//                       Delete
-//                     </button>
-//                   </div>
-//                 )}
-//               </>
-//             )}
-//           </div>
-//         );
-//       })}
-//     </div>
-//   );
-// }
+"use client";
 import { useState } from "react";
 
 export default function BookList({ books, user, onUpdate }) {
@@ -164,7 +39,7 @@ export default function BookList({ books, user, onUpdate }) {
         method: "post",
       }
     );
-
+    setEditingId(null);
     onUpdate();
   };
   const filteredBooks = books.filter((book) => {
@@ -195,7 +70,7 @@ export default function BookList({ books, user, onUpdate }) {
           value={genreFilter}
           onChange={(e) => setGenreFilter(e.target.value)}
         >
-          <option defaultValue={"all genres"}>All Genres</option>
+          <option value={""}>All Genres</option>
 
           {uniqueGenres.map((g) => (
             <option key={g} value={g}>

@@ -47,8 +47,8 @@ export default function Dashboard() {
       </div>
 
       {openForm && <BookForm onAdd={fetchBooks} setOpenForm={setOpenForm} />}
+      {/* {openForm && <BookForm onAdd={fetchBooks} setOpenForm={setOpenForm} />} */}
 
-      {/* <BookList books={books} /> */}
       <BookList books={books} user={user} onUpdate={fetchBooks} />
     </div>
   );

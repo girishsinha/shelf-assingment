@@ -1,7 +1,10 @@
 "use client";
 import { useState } from "react";
+import Loading from "./Loading";
 
 export default function BookForm({ onAdd, setOpenForm }) {
+  const [loading, setLoading] = useState(false);
+
   const [form, setForm] = useState({
     title: "",
     author: "",
@@ -14,6 +17,7 @@ export default function BookForm({ onAdd, setOpenForm }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     if (!selectedImage) return alert("Please select a file!");
     const formData = new FormData();
     const user = JSON.parse(localStorage.getItem("user"));
@@ -33,6 +37,7 @@ export default function BookForm({ onAdd, setOpenForm }) {
       body: formData,
     });
     const data = await res.json();
+    setLoading(false);
     if (data.success) {
       onAdd();
       setForm({ title: "", author: "", genre: "", location: "", contact: "" });
@@ -57,9 +62,12 @@ export default function BookForm({ onAdd, setOpenForm }) {
     reader.readAsDataURL(e.target.files[0]);
   };
 
+  if (loading) {
+    return <Loading />;
+  }
   return (
-    <div className="fixed w-full h-full flex items-center bg-gray-900 justify-center z-50">
-      <form onSubmit={handleSubmit} className="sm:w-xl w-full p-4 mx-auto">
+    <div className="absolute w-full bg-gray-900 flex items-center  justify-center z-30 ">
+      <form onSubmit={handleSubmit} className="sm:w-xl w-full p-4 mx-auto ">
         <h2 className="mb-6 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">
           Add a Book
         </h2>
@@ -75,12 +83,14 @@ export default function BookForm({ onAdd, setOpenForm }) {
             id="file"
             accept="image/*"
             name="file"
-            className="p-3 bg-[#2D2F39] rounded-lg text-[#cccccc] font-Inter font-medium text-sm"
+            className="p-3 bg-[#2D2F39] rounded-lg text-[#cccccc] font-Inter font-medium text-sm mb-5"
             onChange={handleImageChange}
           />
         </div>
         <div>
-          {preview && <img src={preview} alt="selected" className="h-32" />}
+          {preview && (
+            <img src={preview} alt="selected" className="h-32 mb-5" />
+          )}
         </div>
         <input
           className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-5"

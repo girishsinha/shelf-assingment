@@ -1,74 +1,46 @@
 [
   {
-    "id": "b1",
+    "id": "1744652236422",
+    "status": "available",
     "title": "The Alchemist",
     "author": "Paulo Coelho",
-    "genre": "Fiction",
-    "location": "Delhi",
+    "genre": "philosophical ",
+    "location": "bhilai",
     "contact": "ravi@example.com",
     "ownerId": "u1",
-    "status": "available"
+    "imageUrl": "/uploads/81ioPZFMeUL._UF1000,1000_QL80_DpWeblab_.jpg"
   },
   {
-    "id": "1712908902734",
-    "status": "available",
-    "title": "Clean Code",
-    "author": "Robert C. Martin",
-    "genre": "Programming",
-    "location": "Bhilai",
-    "contact": "9876543210",
-    "ownerId": "u1"
-  },
-  {
-    "id": "1744494686129",
-    "status": "Rented",
-    "title": "abcd",
-    "author": "girish",
-    "genre": "comedy",
-    "location": "anda",
-    "contact": "girisi@gmail.com",
-    "ownerId": "u1"
-  },
-  {
-    "id": "1744521362249",
-    "status": "available",
-    "title": "gitishs ",
-    "author": "ahljhife",
-    "genre": "hhh",
-    "location": "anda",
-    "contact": "girishs@gmail.com",
-    "ownerId": "u1"
-  },
-  {
-    "id": "1744521434495",
-    "status": "available",
-    "title": "the book",
-    "author": "me",
-    "genre": "ni",
-    "location": "anda",
-    "contact": "ajsjfoasf@gmail.com",
-    "ownerId": "u1"
-  },
-  {
-    "id": "1744531701442",
-    "status": "available",
-    "title": "testing file",
-    "author": "mee",
-    "genre": "research",
-    "location": "anda",
-    "contact": "girishsi@gmail.com",
+    "id": "1744652589006",
+    "status": "rented",
+    "title": "The Dream Hotel",
+    "author": "Laila Lalami",
+    "genre": "sci-fi",
+    "location": "bhilai",
+    "contact": "ravi@example.com",
     "ownerId": "u1",
-    "imageUrl": "/uploads/akash kumar verma.png"
+    "imageUrl": "/uploads/218695937.jpg"
   },
   {
-    "id": "1744533724052",
+    "id": "1744653357325",
     "status": "available",
-    "title": "giriss test",
-    "author": "meee",
-    "genre": "vom",
-    "location": "anda",
-    "contact": "6267768654",
+    "title": "The Subtle Art of Not Giving a F*ck",
+    "author": "Mark Manson",
+    "genre": "self-help ",
+    "location": "new york",
+    "contact": "ravi@example.com",
     "ownerId": "u1",
-    "imageUrl": "/uploads/ChatGPT Image Apr 1, 2025, 11_39_49 AM.png"
+    "imageUrl": "/uploads/71QKQ9mwV7L.jpg"
+  },
+  {
+    "id": "1744654131954",
+    "status": "available",
+    "title": "Aunt Tigress",
+    "author": "Emily Yu-Xuan Qin",
+    "genre": "fantasy ",
+    "location": "delhi",
+    "contact": "ravi@example.com",
+    "ownerId": "u1",
+    "imageUrl": "/uploads/214988509.jpg"
   }
 ]
